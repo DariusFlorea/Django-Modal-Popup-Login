@@ -1,0 +1,22 @@
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="loginModalLabel">Login Modal</h3>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">X</button>
+      </div>
+      <form id="login-form" method="POST" action="/login_user">
+        <div class="modal-body">
+          {% csrf_token %}
+          {{ login_form }}
+         
+        <hr>
+        <div class="container d-grid gap-2 mt-4 mb-4 text-center">
+          <button type="submit" class="btn btn-primary">Login</button>          
+        </div>
+      </form>    
+    </div>
+  </div>
+</div>
+</div>
